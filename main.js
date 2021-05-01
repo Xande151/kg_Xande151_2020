@@ -1,54 +1,57 @@
 //Take the arguments
-
 var myArgs = process.argv.slice(2);
 
-//var myArgs = [3, 25, 209]
-//var myArgs = [10, 300, 5]
+//Create the new array that will hold the letters
+var strArr = [];
 
 var i;
 var j;
 
 //For loop to iterate between arguments
 for (i = 0; i < myArgs.length; i ++) {
+	//Make the array not null so that concat won't run an error
+	strArr[i] = "";
 	//For loop to iterate between the amount of characters
 	for (j = 0; j < myArgs[i].toString().length; j ++) {
 		//Switch statements to write each number. If it is not a number tell the user N/A
 		switch(myArgs[i].toString().charAt(j)) {
 			case '1':
-				process.stdout.write("One");
+				strArr[i] = strArr[i].concat("One");
 				break;
 			case '2':
-				process.stdout.write("Two");
+				strArr[i] = strArr[i].concat("Two");
 				break;
 			case '3':
-				process.stdout.write("Three");
+				strArr[i] = strArr[i].concat("Three");
 				break;
 			case '4':
-				process.stdout.write("Four");
+				strArr[i] = strArr[i].concat("Four");
 				break;
 			case '5':
-				process.stdout.write("Five");
+				strArr[i] = strArr[i].concat("Five");
 				break;
 			case '6':
-				process.stdout.write("Six");
+				strArr[i] = strArr[i].concat("Six");
 				break;
 			case '7':
-				process.stdout.write("Seven");
+				strArr[i] = strArr[i].concat("Seven");
 				break;
 			case '8':
-				process.stdout.write("Eight");
+				strArr[i] = strArr[i].concat("Eight");
 				break;
 			case '9':
-				process.stdout.write("Nine");
+				strArr[i] = strArr[i].concat("Nine");
 				break;
 			case '0':
-				process.stdout.write("Zero");
+				strArr[i] = strArr[i].concat("Zero");
 				break;
 			default:
-				process.stdout.write("(N/A)");
+				strArr[i] = strArr[i].concat("(N/A)");
 				break;
 		}
 	}
+	//Print out the letters
+	process.stdout.write(strArr[i]);
 	//Add a comma, but not at the end
 	if (i != myArgs.length - 1) {
 		process.stdout.write(",");
