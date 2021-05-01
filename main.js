@@ -1,5 +1,9 @@
 //Take the arguments
+
 var myArgs = process.argv.slice(2);
+
+//var myArgs = [3, 25, 209]
+//var myArgs = [10, 300, 5]
 
 var i;
 var j;
@@ -7,9 +11,9 @@ var j;
 //For loop to iterate between arguments
 for (i = 0; i < myArgs.length; i ++) {
 	//For loop to iterate between the amount of characters
-	for (j = 0; j < myArgs[i].length; j ++) {
+	for (j = 0; j < myArgs[i].toString().length; j ++) {
 		//Switch statements to write each number. If it is not a number tell the user N/A
-		switch(myArgs[i].charAt(j)) {
+		switch(myArgs[i].toString().charAt(j)) {
 			case '1':
 				process.stdout.write("One");
 				break;
