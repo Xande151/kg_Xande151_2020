@@ -1,0 +1,56 @@
+//Take the arguments
+
+//var myArgs = process.argv.slice(2);
+
+//var myArgs = [3, 25, 209]
+var myArgs = [10, 300, 5]
+
+var i;
+var j;
+
+//For loop to iterate between arguments
+for (i = 0; i < myArgs.length; i ++) {
+	//For loop to iterate between the amount of characters
+	for (j = 0; j < myArgs[i].toString().length; j ++) {
+		//Switch statements to write each number. If it is not a number tell the user N/A
+		switch(myArgs[i].toString().charAt(j)) {
+			case '1':
+				process.stdout.write("One");
+				break;
+			case '2':
+				process.stdout.write("Two");
+				break;
+			case '3':
+				process.stdout.write("Three");
+				break;
+			case '4':
+				process.stdout.write("Four");
+				break;
+			case '5':
+				process.stdout.write("Five");
+				break;
+			case '6':
+				process.stdout.write("Six");
+				break;
+			case '7':
+				process.stdout.write("Seven");
+				break;
+			case '8':
+				process.stdout.write("Eight");
+				break;
+			case '9':
+				process.stdout.write("Nine");
+				break;
+			case '0':
+				process.stdout.write("Zero");
+				break;
+			default:
+				process.stdout.write("(N/A)");
+				break;
+		}
+	}
+	//Add a comma, but not at the end
+	if (i != myArgs.length - 1) {
+		process.stdout.write(",");
+	}
+}
